@@ -21,5 +21,6 @@ public class HorarioController {
     @PostMapping
         public List<Horario> list() {
 
+        return List.of();
     }
 }
