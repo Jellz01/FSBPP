@@ -10,7 +10,6 @@ import java.util.Optional;
 
 public interface UsuarioService {
 
-
     // Custom query to find a user by email
     Optional<Usuario> findByEmail(String email);
 
@@ -21,6 +20,14 @@ public interface UsuarioService {
     void deleteById(Long id);
 
     // Update user: Spring Data JPA supports save() for both insert and update
+    Usuario save(Usuario usuario);
 
-    Usuario  save(Usuario usuario);
+    // Create user (method for user creation)
+    Usuario createUsuario(Usuario usuario);
+
+    // Modify user (method for user modification)
+    Usuario modifyUsuario(Long id, Usuario usuario);
+
+    // Delete user by email (optional additional method)
+    void deleteByEmail(String email);
 }

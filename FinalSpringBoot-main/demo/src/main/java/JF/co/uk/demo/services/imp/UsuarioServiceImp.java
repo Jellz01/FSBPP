@@ -34,4 +34,19 @@ public class UsuarioServiceImp implements UsuarioService {
     public Usuario save(Usuario usuario) {
         return null;
     }
+
+    @Override
+    public Usuario createUsuario(Usuario usuario) {
+        return null;
+    }
+
+    @Override
+    public Usuario modifyUsuario(Long id, Usuario usuario) {
+        return null;
+    }
+
+    @Override
+    public void deleteByEmail(String email) {
+
+    }
 }
