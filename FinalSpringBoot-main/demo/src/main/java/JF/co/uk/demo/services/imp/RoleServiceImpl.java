@@ -1,40 +1,36 @@
 package JF.co.uk.demo.services.imp;
 
-import JF.co.uk.demo.daos.RoleDAO;
 import JF.co.uk.demo.services.RoleService;
 import org.springframework.stereotype.Service;
 
-
 @Service
-public class RoleServiceImp implements RoleService {
+public class RoleServiceImpl implements RoleService {
 
-    private final RoleDAO roleDAO;
-
-
-
-
-    public RoleServiceImp(RoleDAO roleDAO) {
-        this.roleDAO = roleDAO;
-    }
-
+    private Long id;
+    private String nombre;
 
     @Override
     public Long getId() {
-        return 0L;
+        return id;
     }
 
     @Override
     public void setId(Long id) {
-
+        this.id = id;
     }
 
     @Override
     public String getNombre() {
-        return "";
+        return nombre;
     }
 
     @Override
     public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
+    @Override
+    public String toString() {
+        return "Role [id=" + id + ", nombre=" + nombre + "]";
     }
 }
