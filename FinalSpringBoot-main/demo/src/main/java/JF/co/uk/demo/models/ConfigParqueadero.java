@@ -1,11 +1,18 @@
 package JF.co.uk.demo.models;
 
+
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class ConfigParqueadero {
 
     private int numeroDeParqueos;
     private double tarifaPorHora;
     private double tarifaPorDia;
     private double tarifaPorMes;
+    @Id
+    private Long id;
 
     // Default constructor
     public ConfigParqueadero() {
@@ -68,5 +75,13 @@ public class ConfigParqueadero {
                 ", tarifaPorDia=" + tarifaPorDia +
                 ", tarifaPorMes=" + tarifaPorMes +
                 '}';
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
     }
 }

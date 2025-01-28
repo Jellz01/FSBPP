@@ -28,14 +28,17 @@ public class Contrato implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    // Many-to-One relationship with Persona (cliente)
     @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "persona_id", nullable = false)
     private Persona persona;
 
+    // Many-to-One relationship with Espacio (parking space or related entity)
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "espacio_id", nullable = false)
     private Espacio espacio;
 
+    // Many-to-One relationship with Tarifa (pricing or plan details)
     @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "tarifa_id", nullable = false)
     private Tarifa tarifa;
@@ -49,7 +52,7 @@ public class Contrato implements Serializable {
     @Column(name = "total", nullable = false, precision = 10, scale = 2)
     private BigDecimal total;
 
-    // Getters y Setters
+    // Getters and Setters
     public Long getId() {
         return id;
     }

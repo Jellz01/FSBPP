@@ -9,6 +9,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/contratos")
+@CrossOrigin(origins = "http://localhost:4200") // Enable CORS for Angular fronten
 public class ContratoController {
 
     private final ContratoService contratoService;
