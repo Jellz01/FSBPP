@@ -9,7 +9,9 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
+
 public class ContratoServiceImp implements ContratoService {
+
     private final ContratoDAO contratoDAO;
 
     public ContratoServiceImp(ContratoDAO contratoDAO) {
