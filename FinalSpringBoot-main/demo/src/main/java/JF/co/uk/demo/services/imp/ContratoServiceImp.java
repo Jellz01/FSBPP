@@ -20,7 +20,7 @@ public class ContratoServiceImp implements ContratoService {
 
     @Override
     public List<Contrato> findAll() {
-        return contratoDAO.findAll();
+        return contratoDAO.findAllContratos();  // Call the custom query
     }
 
     @Override

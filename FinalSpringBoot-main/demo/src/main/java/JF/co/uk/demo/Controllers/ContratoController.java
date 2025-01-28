@@ -5,10 +5,9 @@ import JF.co.uk.demo.services.ContratoService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/contratos")
-@CrossOrigin(origins = "http://localhost:4200") // Allowing CORS for the Angular frontend
+@CrossOrigin(origins = "http://localhost:4200")
 public class ContratoController {
 
     private final ContratoService contratoService;
